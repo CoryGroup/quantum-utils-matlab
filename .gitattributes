@@ -1,0 +1,18 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+
+# Set diff handlers for LaTeX files.
+*.tex diff=tex
+*.bib diff=bibtex
+
+# Set diff handlers for Python files.
+*.py  diff=python
+
+# Set diff handlers for MATLAB files.
+# NB: This also catches Mathematica packages!
+*.m   diff=matlab
+
+# Prevent diffing of Mathematica notebooks, and prevent conflict markers from being
+# added.
+*.nb  -diff merge=binary
+
