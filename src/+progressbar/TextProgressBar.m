@@ -1,25 +1,46 @@
 classdef TextProgressBar < progressbar.ProgressBar
-% A text progress bar in the command prompt. Refreshes are done by taking
-% advantage of the char(8) backspace character.
-%
-% Example Usage:
-%
-% 	N=100;
-% 	t = progressbar.TextProgressBar();
-% 
-% 	t.initialize;
-% 	for k=1:N
-% 		pause(0.05);
-% 		t.display(k/N);
-% 	end
-% 
-% 	t.max_extra_length = 30;
-% 
-% 	t.initialize;
-% 	for k=1:N
-% 		pause(0.03);
-% 		t.display(k/N,sprintf('\nWe are at k=%d',k));
-% 	end
+    % A text progress bar in the command prompt. Refreshes are done by taking
+    % advantage of the char(8) backspace character.
+    %
+    % Example Usage:
+    %
+    % 	N=100;
+    % 	t = progressbar.TextProgressBar();
+    % 
+    % 	t.initialize;
+    % 	for k=1:N
+    % 		pause(0.05);
+    % 		t.display(k/N);
+    % 	end
+    % 
+    % 	t.max_extra_length = 30;
+    % 
+    % 	t.initialize;
+    % 	for k=1:N
+    % 		pause(0.03);
+    % 		t.display(k/N,sprintf('\nWe are at k=%d',k));
+    % 	end
+
+    %--------------------------------------------------------------------------
+    % © 2014 Ian Hincks (ian.hincks@gmail.com).
+    % 
+    % This file is a part of the quantum-utils-matlab project.
+    % Licensed under the AGPLv3.
+    %--------------------------------------------------------------------------
+    % This program is free software: you can redistribute it and/or modify
+    % it under the terms of the GNU Affero General Public License as published
+    % by the Free Software Foundation, either version 3 of the License, or
+    % (at your option) any later version.
+    %
+    % This program is distributed in the hope that it will be useful,
+    % but WITHOUT ANY WARRANTY; without even the implied warranty of
+    % MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    % GNU Affero General Public License for more details.
+    %
+    % You should have received a copy of the GNU Affero General Public License
+    % along with this program.  If not, see <http://www.gnu.org/licenses/>.
+    %--------------------------------------------------------------------------
+
 	
 	properties
 		width = 40				% the number of characters wide the progress bar is
